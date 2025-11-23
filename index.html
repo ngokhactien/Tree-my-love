@@ -25,11 +25,6 @@
 </head>
 
 <body>
-    <iframe src="music/I-Do-911.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-        <audio autoplay loop id="playAudio">
-        <source src="music/I-Do-911.mp3">
-    </audio>
-    </iframe>   
     <div id="main">
         <div id="error">Trình duyệt của bạn không được hỗ trợ. Để được hỗ trợ liên hệ daikupj@gmail.com. Hoặc sử dụng
             (<a href="http://www.google.cn/chrome">Chrome</a>) và (<a href="http://firefox.com/download/">Firefox</a>)
@@ -67,16 +62,12 @@
         </div>
 
     </div>
-    <script>
-         var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  if (!isChrome){
-      $('#iframeAudio').remove()
-  }
-  else {
-      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-  }
+    <audio id="audio" autoplay loop id="playAudio">
+        <source src="music/I-Do-911.mp3">
+    </audio>
+     <script>
+        document.addEventListener('click', function() { document.getElementById('audio').play() }, { once: true });
     </script>
-
     <script>
         (function () {
             var canvas = $('#canvas');

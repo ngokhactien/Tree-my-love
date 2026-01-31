@@ -24,13 +24,43 @@
                     color: #666666
                 }
 
+                /* scc chữ */
                 .say {
                     font-family: "Srisakdi", cursive !important;
-                    color: rgb(239, 106, 138)!important;
-                    font-size: 1.3rem!important;
-                    font-weight: 600!important;
-                    font-family: "Srisakdi", cursive!important;
+                    color: rgb(239, 106, 138) !important;
+                    font-size: 1.3rem !important;
+                    font-weight: 600 !important;
+                    font-family: "Srisakdi", cursive !important;
                     /* có thể chỉnh lại cho hợp mắt */
+                }
+
+                /* loa tắt mở nhạc */
+                #music-toggle {
+                    position: fixed;
+                    right: 20px;
+                    bottom: 20px;
+                    z-index: 9999;
+
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: #fff;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    font-size: 24px;
+                    color: #e91e63;
+                    cursor: pointer;
+
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+                    transition: all 0.25s ease;
+                }
+
+                #music-toggle:hover {
+                    transform: scale(1.1);
+                    background: #ffe4ec;
                 }
                 -->
             </style>
@@ -75,6 +105,9 @@
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
 
+    </div>
+    <div id="music-toggle">
+        <i class='bx bx-volume-full'></i>
     </div>
     <audio id="audio" autoplay loop id="playAudio">
         <source src="music/I-Do-911.mp3">
@@ -237,6 +270,31 @@
 
             runAsync().start();
         })();
+    </script>
+    <script>
+        const audio = document.getElementById("audio");
+        const toggle = document.getElementById("music-toggle");
+        let isMuted = false;
+
+        // click lần đầu để bật nhạc (fix autoplay)
+        document.addEventListener('click', function () {
+            audio.volume = 0.4;
+            audio.play().catch(() => { });
+        }, { once: true });
+
+        toggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            if (isMuted) {
+                audio.play();
+                toggle.innerHTML = "<i class='bx bx-volume-full'></i>";
+            } else {
+                audio.pause();
+                toggle.innerHTML = "<i class='bx bx-volume-mute'></i>";
+            }
+
+            isMuted = !isMuted;
+        });
     </script>
     <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
     </div>

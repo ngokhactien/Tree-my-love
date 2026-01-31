@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="icon" type="image/png" href="image/favicon.ico">
     <link href='https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Srisakdi:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Anh <3 Em</title>
             <link type="text/css" rel="stylesheet" href="./renxi/default.css">
             <script type="text/javascript" src="./renxi/jquery.min.js"></script>
@@ -21,6 +23,15 @@
                 .STYLE1 {
                     color: #666666
                 }
+
+                .say {
+                    font-family: "Srisakdi", cursive !important;
+                    color: rgb(239, 106, 138)!important;
+                    font-size: 1.3rem!important;
+                    font-weight: 600!important;
+                    font-family: "Srisakdi", cursive!important;
+                    /* có thể chỉnh lại cho hợp mắt */
+                }
                 -->
             </style>
 </head>
@@ -33,7 +44,8 @@
         <div id="wrap">
             <div id="text">
                 <div id="code">
-                    <font color="#0000FF"><span class="say">Chào em yêu, Hằng</span><br>
+                    <font color="#0000FF">
+                        <span class="say">Chào em yêu, Hằng</span><br>
                         <span class="say"> </span><br>
                         <span class="say">Em là người con gái anh yêu nhất :)</span><br>
                         <span class="say">Em xinh đẹp nhất !</span><br>
@@ -41,24 +53,24 @@
                         <span class="say">Em cũng yêu anh nhất !</span><br>
                         <span class="say">Em là một điều may mắn trong cuộc sống của anh</span><br>
                         <span class="say">..."Có em, anh sẽ chẳng cần điều gì khác em"</span><br>
-                        <span class="say">Yêu em cho đến khi nào anh không còn tồn tại <i class='bxr  bx-heart'></i>  </span><br>
-                                <span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là
-                                    hôn
-                                    lễ' :*
-                                </span><br>
-                                <span class="say"> </span><br>
-                                <span class="say"><span class="space"></span> -- Yêu em thật nhiều --</span>
-                                <span class="say"><span class="space"></span><span class="space"></span> -- Tiến NK
-                                    --</span>
+                        <span class="say">Yêu em cho đến khi nào anh không còn tồn tại <i class='bxr  bx-heart'></i>
+                        </span><br>
+                        <span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là
+                            hôn
+                            lễ' :*
+                        </span><br>
+                        <span class="say"> </span><br>
+                        <span class="say"><span class="space"></span> -- Yêu em thật nhiều --</span>
+                        <span class="say"><span class="space"><span class="space"></span> -- Tiến NK--</span>
                     </font>
                     </p>
                 </div>
             </div>
             <div id="clock-box">
                 <span class="STYLE1"></span>
-                <font color="#FF0000">Anh <i class='bxr  bx-heart'></i>  Em</font>
-                        <span class="STYLE1"> Time of love...</span>
-                        <div id="clock"></div>
+                <font color="#FF0000">Anh <i class='bxr  bx-heart'></i> Em</font>
+                <span class="STYLE1"> Time of love...</span>
+                <div id="clock"></div>
             </div>
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
@@ -67,8 +79,8 @@
     <audio id="audio" autoplay loop id="playAudio">
         <source src="music/I-Do-911.mp3">
     </audio>
-     <script>
-        document.addEventListener('click', function() { document.getElementById('audio').play() }, { once: true });
+    <script>
+        document.addEventListener('click', function () { document.getElementById('audio').play() }, { once: true });
     </script>
     <script>
         (function () {

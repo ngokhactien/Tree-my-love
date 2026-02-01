@@ -38,11 +38,10 @@
                 #music-toggle {
                     position: fixed;
                     right: 20px;
-                    bottom: 20px;
                     z-index: 9999;
 
-                    width: 48px;
-                    height: 48px;
+                    width: 3rem;
+                    height: 3rem;
                     border-radius: 50%;
                     background: #fff;
 
@@ -104,14 +103,13 @@
             </div>
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
-
-    </div>
-    <div id="music-toggle">
+ <div id="music-toggle">
         <i class='bx bx-volume-full'></i>
     </div>
     <audio id="audio" autoplay loop id="playAudio">
         <source src="music/I-Do-911.mp3">
     </audio>
+    </div>
     <script>
         document.addEventListener('click', function () { document.getElementById('audio').play() }, { once: true });
     </script>

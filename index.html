@@ -28,7 +28,7 @@
                 .say {
                     font-family: "Srisakdi", cursive !important;
                     color: rgb(239, 106, 138) !important;
-                    font-size: 1.3rem !important;
+                    font-size: 1.4rem !important;
                     font-weight: 600 !important;
                     font-family: "Srisakdi", cursive !important;
                     /* có thể chỉnh lại cho hợp mắt */
@@ -74,23 +74,19 @@
             <div id="text">
                 <div id="code">
                     <font color="#0000FF">
-                        <span class="say">Chào em yêu, Hằng</span><br>
+                        <span class="say">Chào em yêu của anh, Hằng à 🌸</span><br>
                         <span class="say"> </span><br>
-                        <span class="say">Em là người con gái anh yêu nhất :)</span><br>
-                        <span class="say">Em xinh đẹp nhất !</span><br>
-                        <span class="say">Em đáng yêu nhất !</span><br>
-                        <span class="say">Em cũng yêu anh nhất !</span><br>
-                        <span class="say">Em là một điều may mắn trong cuộc sống của anh</span><br>
-                        <span class="say">..."Có em, anh sẽ chẳng cần điều gì khác em"</span><br>
-                        <span class="say">Yêu em cho đến khi nào anh không còn tồn tại <i class='bxr  bx-heart'></i>
+                        <span class="say">Em là người con gái mà anh yêu thương nhất trên đời này.</span><br>
+                        <span class="say">Em xinh đẹp theo cách rất riêng,</span><br>
+                        <span class="say">đáng yêu từ những điều nhỏ xíu nhất,</span><br>
+                        <span class="say">và là người yêu anh nhiều nhất nữa 💗</span><br>
+                        <span class="say">Có em bên cạnh, mọi điều trong cuộc sống của anh bỗng trở nên ý nghĩa
+                            hơn.</span><br>
+                        <span class="say">“Chỉ cần có em, anh chẳng cần thêm điều gì khác cả.”💗
                         </span><br>
-                        <span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là
-                            hôn
-                            lễ' :*
-                        </span><br>
-                        <span class="say"> </span><br>
-                        <span class="say"><span class="space"></span> -- Yêu em thật nhiều --</span>
-                        <span class="say"><span class="space"><span class="space"></span> -- Tiến NK--</span>
+                        <span class="say">Anh yêu em đến tận những ngày cuối cùng anh còn tồn tại. Chúng ta sẽ cùng nhau
+                            đi trên một hành trình thật dài.</span><br>
+                        <span class="say"><span class="space"></span>Yêu em thật nhiều</span>
                     </font>
                     </p>
                 </div>
@@ -103,12 +99,12 @@
             </div>
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
- <div id="music-toggle">
-        <i class='bx bx-volume-full'></i>
-    </div>
-    <audio id="audio" autoplay loop id="playAudio">
-        <source src="music/I-Do-911.mp3">
-    </audio>
+        <div id="music-toggle">
+            <i class='bx bx-volume-full'></i>
+        </div>
+        <audio id="audio" autoplay loop id="playAudio">
+            <source src="music/I-Do-911.mp3">
+        </audio>
     </div>
     <script>
         document.addEventListener('click', function () { document.getElementById('audio').play() }, { once: true });
@@ -240,15 +236,11 @@
             }));
 
             var textAnimate = eval(Jscex.compile("async", function () {
-                var together = new Date();
-                together.setFullYear(2025, 6, 21);
-                together.setHours(0);
-                together.setMinutes(0);
-                together.setSeconds(0);
-                together.setMilliseconds(0);
+                var together = new Date(2025, 6, 23, 0, 0, 0); // 23-07-2025
 
                 $("#code").show().typewriter();
                 $("#clock-box").fadeIn(500);
+
                 while (true) {
                     timeElapse(together);
                     $await(Jscex.Async.sleep(1000));
